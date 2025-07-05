@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Calculator
+title = TradeBot
 
 # (str) Package name
-package.name = calculator
+package.name = tradebot
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.rightfix
@@ -16,7 +16,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = assets/*.py
+#source.include_patterns = assets/*.py
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+requirements = python3,kivy,kivymd
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
