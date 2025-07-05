@@ -44,10 +44,10 @@ requirements = python3,kivy,kivymd
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/presplash.png
+#presplash.filename = %(source.dir)s/presplash.png
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/icon.png
+#icon.filename = %(source.dir)s/icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
@@ -101,7 +101,7 @@ android.permissions = android.permission.INTERNET, (name=android.permission.WRIT
 #android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
-#android.api = 31
+android.api = 35
 
 # (int) Minimum API your APK / AAB will support.
 #android.minapi = 21
