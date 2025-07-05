@@ -28,5 +28,4 @@ class MainApp(App):
            orders  = "Turn On VPN Or No Internet Connection"
            return orders
     
-      
 MainApp().run()
