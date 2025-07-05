@@ -4,21 +4,20 @@ ScreenManager:
     
 <Screen1>:
     name: "Home"
-    MDBoxLayout:
+    BoxLayout:
         orientation:"vertical"
         padding:20
         spacing:20
         
-        MDLabel:
+        Label:
             id: working
             text : "OFF"
             bold:True
             font_size: 50
-            color:"black"
             halign:"center"
             size_hint:1,0.5
             
-        MDRaisedButton:
+        Button:
             text: "Click To Trade" 
             pos_hint:{"center_x": 0.5, "center_y":2}
             size_hint: .3,.1
@@ -27,34 +26,33 @@ ScreenManager:
             on_release:
                 value= app.key[0],app.key[1], app.key[2]
                 working.text = f"OFF \n Come back later" if app.key[0] !="" and app.key[1] != "" else "No API key Or API Secret"
-               # order.text=  f"ORDER LIST \n\n\n {app.switch(value)}" 
+                order.text=  f"ORDER LIST \n\n\n {app.switch(value)}" 
                 
-        MDScrollView:
+        ScrollView:
             size_hint_y: None
             height: 500
             padding: 20
-            MDLabel:
+            Label:
                 id: order
                 text : "Orders Will Appear Here"
                 bold:True
                 font_size: 20
-                color:"black"
                 halign:"center"
                 size_hint:1, 0.3
           
-        MDGridLayout:
+        GridLayout:
             rows:1
-            columns:3
+            columns:2
             spacing:3
             size_hint:1,0.1
             
-            MDRaisedButton:
+            Button:
                 text: "Home"
                 size_hint:0.1,0.1
                 on_release:
                     app.root.current = "Home"
                 
-            MDRaisedButton:
+            Button:
                 text: "Settings"
                 size_hint:0.1,0.1
                 on_release:
@@ -63,77 +61,71 @@ ScreenManager:
       
 <Screen2>:
     name: "settings"
-    MDBoxLayout:
+    BoxLayout:
         orientation:"vertical"
         padding: 20
         spacing:20
         
-        MDLabel:
+        Label:
             text : "Settings".upper()
-            color:"black"
             halign:"center"
             bold :True
             font_size:35
             size_hint:1,.3
             
-        MDLabel:
+        Label:
             id: text1
             text:"API Key: "
-            color:"black"
             halign:"center"
             size_hint:1,.1
             
-        MDTextField:
+        TextInput:
             id: key
             hint_text: "API Key"
             size_hint:1,.1
             
-        MDLabel:
+        Label:
             id : text2
             text:"API Secret: "
-            color:"black"
             halign:"center"
             size_hint:1,.1
             
-        MDTextField:
+        TextInput:
             id: secret
             hint_text: "API Secret"
             size_hint: 1,.1
             
-        MDLabel:
+        Label:
             text:"Account Type"
-            color:"black"
             halign:"center"
             size_hint:1,.1
             
-        MDGridLayout:
+        GridLayout:
             rows:3
             columns:2
             size_hint:1,0.2
             
-            MDLabel:
+            Label:
                 text:"Live"
-                color:"black"
                 halign:"center"
                 size_hint:1,.1
                 
-            MDLabel:
+            Label:
                 text:"Demo"
-                color:"black"
                 halign:"center"
                 size_hint:1,.1
         
-            MDCheckbox:
+            CheckBox:
                 group:"account"
                 on_active:
                     app.key[2] = ""
                     
-            MDCheckbox:
+            CheckBox:
                 group:"account"
                 on_active:
                     app.key[2] = "True"
         
-            MDRaisedButton:
+            Button:
                 text:"Save"
                 size_hint:2,.5
                 on_press: 
@@ -144,7 +136,7 @@ ScreenManager:
                     key.text = ""
                     secret.text = ""
                     
-            MDRaisedButton:
+            Button:
                 text:"Clear"
                 size_hint:2,.5
                 on_press: 
@@ -153,19 +145,19 @@ ScreenManager:
                     app.key[0] = ""
                     app.key[1] = ""
                     
-        MDGridLayout:
+        GridLayout:
             rows:1
             spacing:3
             columns:2
             size_hint:1,0.1
             
-            MDRaisedButton:
+            Button:
                 text: "Home"
                 size_hint:0.1,0.1
                 on_release:
                     app.root.current = "Home"
                 
-            MDRaisedButton:
+            Button:
                 text: "Settings"
                 size_hint:0.1,0.1
                 on_release:
