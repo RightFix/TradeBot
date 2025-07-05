@@ -1,4 +1,4 @@
-[app]
+ [app]
 
 # (str) Title of your application
 title = TradeBot
@@ -16,7 +16,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = assets/*.py
+source.include_patterns = assets/*
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
@@ -37,14 +37,14 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,pillow,pybit
+requirements = python3,kivy,pybit
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-#presplash.filename = %(source.dir)s/presplash.png
+presplash.filename = %(source.dir)s/images.png
 
 # (str) Icon of the application
 icon.filename = %(source.dir)s/images.png
@@ -67,7 +67,7 @@ orientation = portrait
 osx.python_version = 3
 
 # Kivy version to use
-osx.kivy_version = 2.1.0
+osx.kivy_version = 2.3.0
 
 #
 # Android specific
@@ -81,7 +81,7 @@ fullscreen = 0
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
-android.presplash_color = navy
+android.presplash_color = black
 
 # (string) Presplash animation using Lottie format.
 # see https://lottiefiles.com/ for examples and https://airbnb.design/lottie/
@@ -104,13 +104,13 @@ android.permissions = android.permission.INTERNET, (name=android.permission.WRIT
 android.api = 35
 
 # (int) Minimum API your APK / AAB will support.
-android.minapi = 21
+#android.minapi = 21
 
 # (int) Android SDK version to use
-android.sdk = 34
+#android.sdk = 20
 
 # (str) Android NDK version to use
-android.ndk = 25b
+#android.ndk = 23b
 
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
 #android.ndk_api = 21
@@ -290,7 +290,7 @@ android.archs = arm64-v8a, armeabi-v7a
 # android.numeric_version = 1
 
 # (bool) enables Android auto backup feature (Android API >=23)
-#android.allow_backup = True
+android.allow_backup = True
 
 # (str) XML file for custom backup rules (see official auto backup documentation)
 # android.backup_rules =
