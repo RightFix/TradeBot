@@ -11,6 +11,9 @@ class MainApp(MDApp):
     key  = ["","",""]
     
     def build(self):
+      
+      self.theme_cls.primary_palette = "Blue"
+      self.theme_cls.theme_style = "Dark"
       return super().build()
     
 MainApp().run()
