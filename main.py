@@ -13,7 +13,7 @@ class MainApp(MDApp):
     def build(self):
       
       self.theme_cls.primary_palette = "Blue"
-      self.theme_cls.theme_style = "Dark"
+      self.theme_cls.theme_style = "Light"
       return super().build()
     
 MainApp().run()
