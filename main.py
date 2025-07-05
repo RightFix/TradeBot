@@ -1,13 +1,13 @@
-from kivymd.app import MDApp
-from kivymd.uix.screen import MDScreen
+from kivy.app import MDApp
+from kivy.uix.screenmanager import MDScreen
 
-class Screen1(MDScreen):
+class Screen1(Screen):
   pass
     
-class Screen2(MDScreen):
+class Screen2(Screen):
     pass
         
-class MainApp(MDApp):
+class MainApp(App):
     key  = ["","",""]
     
     def build(self):
