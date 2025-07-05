@@ -1,4 +1,3 @@
-import time
 from kivy.app import App
 from pybit.exceptions import FailedRequestError
 from kivy.uix.screenmanager import Screen
