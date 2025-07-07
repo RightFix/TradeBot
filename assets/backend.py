@@ -7,7 +7,7 @@ class code:
   order_outputs = []
   if k1 != "" and k2 != "": 
    
-   time_length = 60
+   time_length = 120
    num_of_candle = 60 + time_length # also run time of bot in minutes
    start_time = (time.time() * 1000)
    end_time  = time.time()
