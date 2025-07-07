@@ -67,14 +67,14 @@ class code:
      #buy
      if (candles_high < candle_high)  and (candle_close > candle_open) and (quantity  > 0)  and (Profit_value > 0) and (candle_low > candle_high_62) and (candle_low > candle_high_58):
       
-        session.place_order( category="linear",  symbol = crypto[y],  side ="Buy", qty = str(quantity),  tpTriggerBy ="LastPrice",   triggerPrice = str(candle_high),  takeProfit = str(candle_high + Profit_value), triggerBy = "LastPrice", timeInForce = "GTC" ,  triggerDirection = 1, orderType="Limit" , price = str(candle_high ), positionIdx = 0)
+        session.place_order( category="linear",  symbol = crypto[y],  side ="Buy", qty = str(quantity),  tpTriggerBy ="LastPrice",   triggerPrice = str(candle_high),  takeProfit = str(candle_high + Profit_value), triggerBy = "LastPrice", timeInForce = "FOK" ,  triggerDirection = 1, orderType="Limit" , price = str(candle_high ), positionIdx = 0)
        
         order_outputs.append(f"{candle_high} {crypto[y]} buy  {candle_time}")
         
      #sell
      elif (candles_low > candle_low) and (candle_close < candle_open) and (quantity  > 0 ) and (Profit_value > 0) and (candle_high < candle_low_62) and (candle_high < candle_low_58):
            
-       session.place_order( category="linear",  symbol = crypto[y],  side ="Sell", qty = str(quantity),  tpTriggerBy ="LastPrice",  triggerPrice = str(candle_low),  takeProfit = str(candle_low - Profit_value), triggerBy = "LastPrice", timeInForce = "GTC", triggerDirection = 2,orderType="Limit", price = str(candle_low), positionIdx= 0)
+       session.place_order( category="linear",  symbol = crypto[y],  side ="Sell", qty = str(quantity),  tpTriggerBy ="LastPrice",  triggerPrice = str(candle_low),  takeProfit = str(candle_low - Profit_value), triggerBy = "LastPrice", timeInForce = "FOK", triggerDirection = 2,orderType="Limit", price = str(candle_low), positionIdx= 0)
       
        order_outputs.append(f"{candle_low} {crypto[y]} sell {candle_time}")
      
