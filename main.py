@@ -25,6 +25,6 @@ class MainApp(App):
           
         except FailedRequestError:
            orders  = "Turn On VPN Or No Internet Connection"
-           return orders
+           return order
     
 MainApp().run()
